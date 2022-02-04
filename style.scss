@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$transition: 0.5s;
+// - Pale blue: hsl(225, 100%, 94%)
+// - Bright blue: hsl(245, 75%, 52%)
+// - Very pale blue: hsl(225, 100%, 98%)
+// - Desaturated blue: hsl(224, 23%, 55%)
+// - Dark blue: hsl(223, 47%, 23%)
+body {
+  background-color: $pale-blue;
+  height: 100vh;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  max-width: 450px;
+  width: 95%;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  > img {
+    width: 100%;
+  }
+
+  > h1 {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: $dark-blue;
+    font-weight: 900;
+  }
+  > p {
+    color: $desaturated-blue;
+    margin-inline: 46px;
+    margin-bottom: 24px;
+  }
+  > button {
+    width: 80%;
+    padding: 16px 0;
+    margin-bottom: 30px;
+    background-color: $bright-blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: rgba(106, 106, 231, 0.4) 0px 7px 29px 0px;
+    transition: $transition;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  > a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: $desaturated-blue;
+    margin-bottom: 50px;
+    transition: $transition;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}
+
+.annual-plan {
+  list-style: none;
+  background-color: $very-pale-blue;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 10% 32px;
+  border-radius: 10px;
+  li:nth-child(2) {
+    margin-left: -80px;
+  }
+  h4 {
+    color: $dark-blue;
+    font-weight: 900;
+  }
+  p {
+    color: $desaturated-blue;
+  }
+  a {
+    color: $bright-blue;
+    font-weight: 700;
+    transition: $transition;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/*  Attribution*/
+
+.attribution {
+  position: absolute;
+  bottom: 1%;
+  padding: 1rem;
+}
